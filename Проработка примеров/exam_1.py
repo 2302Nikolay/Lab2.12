@@ -7,5 +7,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    hello_world()
-    print(type(hello_world))
+    hello = hello_world
+    hello()
