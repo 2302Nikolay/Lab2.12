@@ -2,10 +2,11 @@
 # _*_ coding: utf-8 _*_
 
 
-def hello_world():
-    print("Hello, world!")
+def wrapper_function():
+    def hello_world():
+        print("Hello, world!")
+    hello_world()
 
 
 if __name__ == '__main__':
-    hello = hello_world
-    hello()
+    wrapper_function()
