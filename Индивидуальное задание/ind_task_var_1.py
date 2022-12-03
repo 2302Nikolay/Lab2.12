@@ -6,13 +6,15 @@
 Определите декоратор для этой функции с именем (внешней функции) func_show , который
 отображает результат на экране в виде строки (без кавычек): "Площадь прямоугольника:
 <значение>". Вызовите декорированную функцию get_sq .
-
 """""
 
 
 def func_show(func):
-    def wrapper(width, height):
-        res = func(width, height)
+    def wrapper(*args):
+        rw = 1
+        for i in args:
+            rw *= i
+            res = func(*args)
         print(f"Площадь прямоугольника: {res}")
         return res
 
