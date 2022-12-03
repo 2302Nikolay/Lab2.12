@@ -20,8 +20,11 @@ def func_show(func):
 
 
 @func_show
-def get_sq(width, height):
-    return width * height
+def get_sq(*args):
+    r = 1
+    for num in args:
+        r *= num
+    return r
 
 
 if __name__ == '__main__':
