@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# _*_ coding: utf-8 _*_
 
 def decorator_with_name(name):
     print('>decorator_with_name: ', name)
@@ -21,7 +22,8 @@ def add(a, b):
     return a + b
 
 
-print("Старт программы")
-r = add(10, 10)
-print(r)
-print("Конец программы")
+if __name__ == '__main__':
+    print("Старт программы")
+    r = add(10, 10)
+    print(r)
+    print("Конец программы")
