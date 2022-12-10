@@ -14,19 +14,15 @@ def func_show(func):
         rw = 1
         for i in args:
             rw *= i
-            res = func(*args)
-        print(f"Площадь прямоугольника: {res}")
-        return res
+        print(f"Площадь прямоугольника: ", func(*args))
+        return func(*args)
 
     return wrapper
 
 
 @func_show
-def get_sq(*args):
-    r = 1
-    for num in args:
-        r *= num
-    return r
+def get_sq(width, height):
+    return width * height
 
 
 if __name__ == '__main__':
